@@ -20,41 +20,16 @@ var app = new function() {
 		var density = feature.properties.population[ageRange];
 
 		var green = 255 - parseInt(255 * density);
+		var blue = 175 - parseInt(125 * density);
 
-		return 'rgb(255,' + green + ',125)';
-
-		if (density > 0.9) {
-			return '#BD0026';
-		}
-
-		if (density > 0.8) {
-			return '#F03B20';
-		}
-
-		if (density > 0.6) {
-			return '#FD8D3C';
-		}
-
-		if (density > 0.4) {
-			return '#FEB24C';
-		}
-
-		if (density > 0.2) {
-			return '#FED976';
-		}
-
-		if (density > 0) {
-			return '#FFFFB2';
-		}
-
-		return '#FFF';
+		return 'rgb(255,' + green + ',' + blue + ')';
 	}
 
     var style = function(feature) {
       return {
         weight: 0,
         strokeColor: "#dddddd",
-        fillOpacity: 0.75,
+        fillOpacity: 0.6,
         fillColor: getColor(feature)
       };
     }
