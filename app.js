@@ -19,6 +19,10 @@ var app = new function() {
 
 		var density = feature.properties.population[ageRange];
 
+		var green = 255 - parseInt(255 * density);
+
+		return 'rgb(255,' + green + ',125)';
+
 		if (density > 0.9) {
 			return '#BD0026';
 		}
@@ -50,7 +54,7 @@ var app = new function() {
       return {
         weight: 0,
         strokeColor: "#dddddd",
-        fillOpacity: 0.5,
+        fillOpacity: 0.75,
         fillColor: getColor(feature)
       };
     }
