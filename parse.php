@@ -2,9 +2,9 @@
 
 $id = 'CMWD_2011_EW_BGC';
 
-$csv = fopen('wards.csv', 'r');
+$csv = fopen('data/wards.csv', 'r');
 $fields = fgetcsv($csv);
-$start = array_search('All ages', $fields);
+$start = array_search('All', $fields);
 
 $counts = array();
 while (($line = fgetcsv($csv)) !== false) {
