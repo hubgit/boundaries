@@ -1,6 +1,6 @@
 var geojsonURL = "CMWD_2011_EW_BGC-properties.geojson";
 var defaultLocation = [52.0, -2.0];
-var defaultZoom = 8;
+var defaultZoom = 7;
 
 var app = new function() {
 	var map, ageRange, layer;
